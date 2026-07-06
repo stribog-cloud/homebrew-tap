@@ -5,21 +5,21 @@
 class Kubevigil < Formula
   desc "Kubernetes Security Posture Management CLI — know your clusters before attackers do."
   homepage "https://github.com/stribog-cloud/KubeVigil"
-  version "1.1.0"
+  version "1.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stribog-cloud/KubeVigil/releases/download/v1.1.0/kubevigil_1.1.0_darwin_amd64.tar.gz"
-      sha256 "1c2e4e8ca7aa11d235aa4175c162282a3860d3ca35eeff219633e51a69c5aa04"
+      url "https://github.com/stribog-cloud/KubeVigil/releases/download/v1.2.0/kubevigil_1.2.0_darwin_amd64.tar.gz"
+      sha256 "7a47043935061fbb59d6ccadbe0bbd5e3c8a1ac204c82a797856eb9a5f40a352"
 
       define_method(:install) do
         bin.install "kubevigil"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stribog-cloud/KubeVigil/releases/download/v1.1.0/kubevigil_1.1.0_darwin_arm64.tar.gz"
-      sha256 "af556811f4dc3c343e86fc58cd0227858e28cb3f8db47bd28d0a9d4341c60d0b"
+      url "https://github.com/stribog-cloud/KubeVigil/releases/download/v1.2.0/kubevigil_1.2.0_darwin_arm64.tar.gz"
+      sha256 "a6880e817260a0c1bc71f914a5c33ef55e30b2bbabfe54e310979183e4c38918"
 
       define_method(:install) do
         bin.install "kubevigil"
@@ -29,15 +29,15 @@ class Kubevigil < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stribog-cloud/KubeVigil/releases/download/v1.1.0/kubevigil_1.1.0_linux_amd64.tar.gz"
-      sha256 "6c2b7452f370f1eb90c5c0998aef44f6ebe0f074ffa8ec229eed5802b649d87f"
+      url "https://github.com/stribog-cloud/KubeVigil/releases/download/v1.2.0/kubevigil_1.2.0_linux_amd64.tar.gz"
+      sha256 "6d9f732baa6f898c19976bc5b36936c246bbd3cedbc4242218b2c806ffe2dfd3"
       define_method(:install) do
         bin.install "kubevigil"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stribog-cloud/KubeVigil/releases/download/v1.1.0/kubevigil_1.1.0_linux_arm64.tar.gz"
-      sha256 "873692ba52496d45e4aa4271d1d596846145e0eacea731280ece525c99267d9d"
+      url "https://github.com/stribog-cloud/KubeVigil/releases/download/v1.2.0/kubevigil_1.2.0_linux_arm64.tar.gz"
+      sha256 "956e013ed53e8e470c68f9d118b4e0d97a6847fb1a34857d07e801f3a3cf2d7e"
       define_method(:install) do
         bin.install "kubevigil"
       end
